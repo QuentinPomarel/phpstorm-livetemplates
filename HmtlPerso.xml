@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="HmtlPerso">
+  <template name="pif" value="&lt;?php if($COND$): ?&gt;&#10;    $END$&#10;&lt;?php endif; ?&gt;&#10;" description="&lt;?php if(): ?&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="COND" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="PHP" value="false" />
+    </context>
+  </template>
+  <template name="pelse" value="&lt;?php else: ?&gt;&#10;$END$" description="&lt;?php else: ?&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="pelseif" value="&lt;?php elseif($COND$): ?&gt;&#10;$END$" description="&lt;?php elseif(): ?&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="COND" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+</templateSet>
+
