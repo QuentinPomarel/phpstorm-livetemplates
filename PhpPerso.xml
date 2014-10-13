@@ -6,5 +6,60 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="loc" value="header('Location: $VAR$');$END$" description="header('location')" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bdd" value="try{&#10;    $bdd = new PDO('mysql:host=$HOST$;dbname=$DBNAME$','$ACCESS$','$MDP$');&#10;} catch (Exception $e){&#10;    die('Erreur :'. $e-&gt;getMessage());&#10;}$END$" description="try bdd" toReformat="false" toShortenFQNames="true">
+    <variable name="HOST" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DBNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACCESS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MDP" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="if" value="if ($COND$){&#10;    $END$&#10;}" description="if" toReformat="false" toShortenFQNames="true">
+    <variable name="COND" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="else" value="else{&#10;    $END$&#10;}" description="else" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="elseif" value="elseif ($COND$){&#10;    $END$&#10;}" description="elseif" toReformat="false" toShortenFQNames="true">
+    <variable name="COND" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="for" value="for ($i = $NUMBER$; $i &lt;= $VAR$; $i++) {&#10;    $END$&#10;}" description="for" toReformat="false" toShortenFQNames="true">
+    <variable name="NUMBER" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="foreach" value="foreach($VAR1$ as $VAR2$){&#10;$END$&#10;}" description="foreach" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="switch" value="switch ($VAR$){&#10;    case $VALUE$:&#10;        $EFFECT$;&#10;        break;&#10;    default:&#10;        $EFFECT2$;    &#10;}$END$" description="switch" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="EFFECT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="EFFECT2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
 </templateSet>
 
